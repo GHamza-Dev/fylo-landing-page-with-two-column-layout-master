@@ -1,0 +1,48 @@
+.cta--section{
+    padding: 55px 5%;
+    width: 100vw;
+    transform: translateX(-20px);
+    color: $light-grayish-blue;
+    background-color: $desaturated-blue;
+
+    &__text{
+        text-align: center;
+        opacity: .9;
+
+        & p{
+            padding: 1.2em 0;
+        }
+    }
+
+    &__form{
+        padding: 1.2em 2em;
+    }
+}
+
+@include large(){
+    .cta--section{
+        @include flex-r(space-between,baseline);
+        
+        &__form{
+            @include flex-c(null,center);
+            flex: 1;            
+        }
+
+        .form--group{
+            width: 90%;
+            max-width: 500px;
+        }   
+
+        button{
+            width: 250px;
+        }
+    
+        &__text{
+            text-align: start;
+            flex: 1;
+            h2{
+                padding-left: 1.3em 0;
+            }
+        }
+    }  
+}

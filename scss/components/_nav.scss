@@ -1,0 +1,22 @@
+nav{
+    padding: 15px 5%;
+    @include flex-r(space-between,center);
+
+    ul{
+        @include flex-r(space-between,center);
+    }
+
+    a{
+        margin-right: 15px;
+        font-weight: $semibold;
+        font-family: $f-open-sans;
+        color: $desaturated-blue;
+    }
+}
+
+.logo{
+    display: flex;
+    img{
+        width: 110px;
+    }
+}

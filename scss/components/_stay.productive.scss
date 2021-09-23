@@ -1,0 +1,85 @@
+@import './card';
+
+.stay--productive{
+    @include flex(column,space-between,center);
+    width: 100vw;
+    margin-top: 100px;
+    padding: 80px 5% 0 5%;
+    transform: translateX(-20px);
+    background-color: $light-grayish-blue;
+    overflow: hidden;
+
+    @include large(){
+        flex-direction: row-reverse;
+
+        img{
+            max-width: 100%;
+        }
+    }
+
+    
+
+    &::before{
+        content: '';
+        width: 100%;
+        height: 53px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../../images/bg-curve-desktop.svg');
+    }
+
+    .content--text{
+        margin-top: 75px;
+
+        h2{
+            font-size: 1.7rem;
+            text-align: center;
+            padding: 1em 0;
+            color: $very-dark-blue;
+
+            @include large(){
+                text-align: start;
+            }
+        }
+
+        p{
+            padding: .7em 0;
+            color: $very-dark-blue;
+            font-weight: $semibold;
+            opacity: .7;
+        }
+    }
+
+    &__cta{
+        margin: 1.5em 0;
+        text-align: center;
+
+        a{
+            @include flex-r(center,center);
+            color: $moderate-cyan;
+            position: relative;
+
+            &::after{
+               content: '';
+               position: absolute;
+               width: 165px;
+               bottom: -3px;
+               height: 1.8px;
+               background-color: $moderate-cyan; 
+            }
+
+            @include large(){
+                justify-content: start;
+            }
+        }
+
+        img{
+            width: 25px;
+            margin-left: 5px;
+        }
+    }  
+}

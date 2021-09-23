@@ -1,0 +1,66 @@
+.footer{
+    background-color: $very-dark-blue;
+    padding: 20px 5%;
+    color: $light-grayish-blue;
+    width: 100vw;
+
+
+    &--logo{
+        img{
+            width: 150px;
+        }
+    }
+
+    &--lists{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+        &__list{
+            color: $light-grayish-blue;
+            margin: 2.1em 0;
+
+            li{
+                margin: .8em 0;
+            }
+
+            a{
+                font-size: 1.1rem;
+                color: inherit;
+            }
+
+            &.contact--info {
+    
+                a{
+                    @include flex-r(null,center);
+                }
+                
+                span{
+                    margin-left: 15px;
+                    font-size: 1.1rem;
+                }
+    
+                img{
+                    width: 20px;
+                }
+            }
+
+            &.media{
+                @include flex-r(null,null);
+                
+                li:not(:nth-child(1)){
+                    margin-left: 20px;
+                }
+
+                img{
+                    width: 30px;
+                    transition: transform .5s ease;
+                    border-radius: 50%;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,53 @@
+@import './nav';
+
+.header{
+    width: 100%;
+    &__body{
+        padding: 0 5%;
+    }
+
+    &__img{
+        text-align: center;
+        margin-top: 60px;
+    }
+    
+    &__content{
+        text-align: center;
+        color: $very-dark-blue;
+        @include large(){
+            text-align: start;
+        }
+
+        h2{
+            margin: 1.1em 0;
+            font-weight: $bold;
+            font-family: $f-raleway;
+            font-size: 1.6rem;
+        }
+
+        p{
+            margin: 1.1em 0;
+            font-weight: $semibold;
+        }
+
+        &--form{
+            margin-top: 30px;
+        }
+    }
+}
+
+
+@include large(){
+    .header{
+        &__body{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img{
+            max-width: 90%;
+        }
+    }
+}

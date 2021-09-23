@@ -1,0 +1,56 @@
+.card{
+    width: 90%;
+    max-width: 350px;
+    margin: 55px auto;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: $very-dark-blue;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(219, 216, 216);
+    cursor: pointer;
+    transition: transform .5s cubic-bezier(0.24, 0.01, 0.12, 1.50);
+
+    @include large(){
+        margin: 55px 0;
+    }
+
+    &__quotes{
+        width: 20px;
+        margin: 10px 0;
+        opacity: .9;
+    }
+
+    &--paragraph{
+        font-weight: $normal;
+    }
+
+    &--testimonial{
+        margin-top: 15px;
+        @include flex-r(null,center);
+
+        &__image{
+            display: flex;
+        }
+
+        img{
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        &__info{
+            margin-left: 13px;
+
+            & h3{
+                font-size: 1.1rem;
+            }
+            
+            & p{
+                font-size: .9rem;
+            }
+        }
+    }
+
+    &:hover{
+        transform: skewX(-10deg);
+    }
+}
