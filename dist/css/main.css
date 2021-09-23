@@ -258,7 +258,7 @@ nav a {
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../images/bg-curve-desktop.svg");
+  background-image: url("../images/bg-curve-desktop.svg");
 }
 
 .stay--productive .content--text {
